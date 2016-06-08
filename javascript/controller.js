@@ -2,7 +2,7 @@ angular.module('collegeControllers',[]).controller('MyController',function($scop
 )	{
 //	controller	logic	here
     $scope.showInfo = function (infoId) {
-        $(infoId).toggle();
+        $(infoId).show();
         $('html,body').animate({
         	scrollTop: $(infoId).offset().top
         },1000);
