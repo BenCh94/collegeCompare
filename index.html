@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="collegeCompare">
+<head>
+	<meta charset="UTF-8">
+	<title>College Compare</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
+</head>
+<body>
+<!--Navbar Start-->
+<nav class="navbar navbar-default" role="navigation" style="background-color:#0D4E49">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand navLink" href="#">College Compare</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a class="navLink" href="#">Home</a></li>
+				<li><a class="navLink" href="#">About</a></li>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle navLink" data-toggle="dropdown">Login/Register <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a class="navLink" href="#">Login</a></li>
+						<li><a class="navLink" href="#">Register</a></li>
+						<li><a class="navLink" href="#">View Account</a></li>
+						<li><a class="navLink" href="#">Forgot password?</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
+<!--Navbar End-->
+<header>
+<div class="jumbotron" id="homeJumbo">
+  <div class="container">
+  	<div class="row">	
+  		<h1 class="col-md-6" id="headerTitle">College Compare,</h1>
+  	</div>
+  	<div class="row">
+  		<h2 class="col-md-5" id="headerTitle">Find the <strong>right</strong> university for you.</h2>
+  	</div>
+  	<div class="row">
+  		<p class="col-md-8" id="headerText">College compare makes it easy to <em>compare</em> Irish universities for free!</p>
+  	</div>
+  		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  </div>
+</div>
+</header>
+
+<div class="container" id="mainContent" ng-controller="MyController">
+<!--Carousel Start-->
+<div id="homePageCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#homePageCarousel" data-slide-to="0" class=""></li>
+		<li data-target="#homePageCarousel" data-slide-to="1" class=""></li>
+		<li data-target="#homePageCarousel" data-slide-to="2" class="active"></li>
+		<li data-target="#homePageCarousel" data-slide-to="3" class=""></li>
+		<li data-target="#homePageCarousel" data-slide-to="4" class=""></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item">
+			<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="imgs/UCD-James-Joyce.jpg" class="carouselImage">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1 class="carousel-text">UCD</h1>
+					<p class="carousel-text">University College Dublin</p>
+					<p><a class="btn btn-lg btn-primary infoToggler"  role="button" ng-click="showInfo('#ucdInfo')">Learn more</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="imgs/dcu.jpg" class="carouselImage">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1 class="carousel-text">DCU</h1>
+					<p class="carousel-text">Dublin City University</p>
+					<p><a class="btn btn-lg btn-primary infoToggler" role="button" ng-click="showInfo('#dcuInfo')">Learn more</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="item active">
+			<img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="imgs/dit.jpg" class="carouselImage">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1 class="carousel-text">DIT</h1>
+					<p class="carousel-text">Dublin Institute of Technology</p>
+					<p><a class="btn btn-lg btn-primary infoToggler" role="button" ng-click="showInfo('#ditInfo')">Learn more</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:Fourth slide" alt="Fourth slide" src="imgs/trinity.jpg" class="carouselImage">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1 class="carousel-text">TCD</h1>
+					<p class="carousel-text">Trinity College Dublin</p>
+					<p><a class="btn btn-lg btn-primary infoToggler" role="button" ng-click="showInfo('#tcdInfo')">Learn more</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:Fifth slide" alt="Fifth slide" src="imgs/iadt.jpg" class="carouselImage">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1 class="carousel-text">IADT</h1>
+					<p class="carousel-text">Dùn Laoghaire Institute of Art Design and Technology</p>
+					<p><a class="btn btn-lg btn-primary infoToggler" role="button" ng-click="showInfo('#iadtInfo')">Learn more</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="left carousel-control" href="#homePageCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="#homePageCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<!--Carousel End-->
+<br>
+<div class="row">
+	<form role="search" id="homeSearch" class="col-md-8">
+		<label for="homeSearch">Browse Universities</label>
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Search">
+		</div>
+		<button type="submit" class="btn btn-default">Search</button>
+	</form>
+</div>
+<div class="row">
+	<button type="button" class="btn btn-primary btn-lg col-md-2" id="compareButton" href="#">Compare</button>
+</div>
+<!--Hidden Content Start-->
+<section class="intiallyHidden" id="ucdInfo">
+	<div class="row">
+		<button type="button" class="btn btn-default hide-button" aria-label="hide content">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div class="row">
+		<div class="col-md-6 hiddenBox table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th><h3>UCD at a glance</h3></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Global Ranking</strong>: 176</td>
+					</tr>
+					<tr>
+						<td><strong>Irish Ranking</strong>: 2</td>
+					</tr>
+					<tr>
+						<td><strong>Enrollment</strong>: 30,000+</td>
+					</tr>
+					<tr>
+						<td><strong>Founded</strong>: 1854</td>
+					</tr>
+					<tr>
+						<td><strong>Website</strong>: <a href="http://www.ucd.ie/">http://www.ucd.ie/</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 hiddenBox">
+			<h4>UCD video</h4>
+			<iframe width="100%" height="310px"  src="https://www.youtube.com/embed/4pgiisFW7LQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<a class="twitter-timeline" href="https://twitter.com/ucddublin">Tweets by ucddublin</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+</section>
+<section class="intiallyHidden" id="dcuInfo">
+	<h1>Hello DCU!</h1>
+</section>
+<section class="intiallyHidden" id="ditInfo">
+	<h1>Hello DIT!</h1>
+</section>
+<section class="intiallyHidden" id="tcdInfo">
+	<h1>Hello TCD!</h1>
+</section>
+<section class="intiallyHidden" id="iadtInfo">
+	<h1>Hello IADT!</h1>
+</section>
+</div>
+<footer>
+	<ul>
+		<li class="active"><a class="navLink" href="#">Home</a></li>
+		<li><a class="navLink" href="#">About</a></li>
+	</ul>
+</footer>
+	<script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src='javascript/app.js'></script>
+  	<script src='javascript/controller.js'></script>
+</body>
+</html>
