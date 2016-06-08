@@ -1,0 +1,89 @@
+.navbar-brand {
+	color: white;
+}
+.carousel-text {
+	color:white;
+}
+.headerImage{
+	margin-bottom: 25px;
+	margin-top: none;
+	height: 800px;
+	width: 100%;
+}
+.navbar{
+	margin-bottom: 0;
+	border: 0;
+	border-radius: 0;
+	min-height: 100px;
+	padding-top: 20px;
+}
+/*important tag used to overide bootstrap default nav colors*/
+.navLink{
+	color:white !important;
+}
+.navbar-nav>.active>a{
+	background-color: #41837E !important;
+}
+.nav .open>a{
+	background-color: #41837E !important;
+}
+.dropdown-menu{
+	background-color: #41837E !important;
+}
+.dropdown-menu>li>a:hover {
+	background-color: #699D99 !important;
+}
+footer{
+	background-color: #699D99;
+	padding: 15px; 
+}
+#homeJumbo{
+	background-image: url(../imgs/UCD-James-Joyce.jpg);
+	background-size: 100% 100%;
+}
+#headerTitle{
+	background: rgb(84,167,89,0.8);
+	background: rgba(84,167,89,0.8);
+	color: white;
+}
+#headerText{
+	background: rgb(17,100,22,0.8);
+	background: rgba(17,100,22,0.8);
+	color: white;
+}
+.carousel-caption{
+	background: rgb(77,101,141,0.8);
+	background: rgba(77,101,141,0.8);
+}
+#mainContent{
+	margin-bottom: 150px;
+}
+.carouselImage{
+	max-height: 450px;
+	width: 100%;
+}
+#compareButton{
+	float: right;
+	margin-bottom: 10px;
+}
+.intiallyHidden{
+	display: none; 
+}
+.hide-button{
+	float: right;
+}
+.hiddenBox{
+	background-color: #0D4E4A;
+	border-radius: 5px;
+	color: white;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+}
+.table>tbody>tr>td{
+	font-size: 22px;
+	padding: 10px;
+}
+.table>tbody>tr>td>a{
+	color: #86C98A;
+}
