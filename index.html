@@ -8,6 +8,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
+	<!--TWITTER EMBEDD CODE TO DO AFTER MAIN CONTENT
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+	<script src="libs/ngtweet.min.js"></script>
+	-->
 </head>
 <body>
 <!--Navbar Start-->
@@ -143,9 +147,15 @@
 	<button type="button" class="btn btn-primary btn-lg col-md-2" id="compareButton" href="#">Compare</button>
 </div>
 <!--Hidden Content Start-->
+<!-- UCD INFO START -->
 <section class="intiallyHidden" id="ucdInfo">
 	<div class="row">
-		<button type="button" class="btn btn-default hide-button" aria-label="hide content">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Add to compare
+			</label>
+		</div>
+		<button type="button" class="btn btn-default hide-button" aria-label="hide content" ng-click="dismissInfo('#ucdInfo')">
 			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 		</button>
 	</div>
@@ -181,24 +191,210 @@
 			<iframe width="100%" height="310px"  src="https://www.youtube.com/embed/4pgiisFW7LQ" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
+	<!-- TWITTER CODE
 	<div class="row">
 		<div class="col-md-6">
-			<a class="twitter-timeline" href="https://twitter.com/ucddublin">Tweets by ucddublin</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<twitter-timeline>
+				<a class="twitter-timeline"
+				href="https://twitter.com/IAmAru/lists/food-trucks"
+				data-widget-id="673710543212052480">
+				Tweets from https://twitter.com/IAmAru/lists/food-trucks
+			</a>
+			<twitter-timeline>	
 		</div>
 	</div>
+	-->
+<hr>
 </section>
+<!-- UCD INFO END -->
+<!-- DCU INFO START -->
 <section class="intiallyHidden" id="dcuInfo">
-	<h1>Hello DCU!</h1>
+	<div class="row">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Add to compare
+			</label>
+		</div>
+		<button type="button" class="btn btn-default hide-button" aria-label="hide content" ng-click="dismissInfo('#dcuInfo')">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div class="row">
+		<div class="col-md-6 hiddenBox table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th><h3>DCU at a glance</h3></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Global Ranking</strong>: 176</td>
+					</tr>
+					<tr>
+						<td><strong>Irish Ranking</strong>: 2</td>
+					</tr>
+					<tr>
+						<td><strong>Enrollment</strong>: 30,000+</td>
+					</tr>
+					<tr>
+						<td><strong>Founded</strong>: 1854</td>
+					</tr>
+					<tr>
+						<td><strong>Website</strong>: <a href="http://www.ucd.ie/">http://www.ucd.ie/</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 hiddenBox">
+			<h4>UCD video</h4>
+			<iframe width="100%" height="310px"  src="https://www.youtube.com/embed/4pgiisFW7LQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+<hr>
 </section>
+<!-- DCU INFO END -->
+<!-- DIT INFO START -->
 <section class="intiallyHidden" id="ditInfo">
-	<h1>Hello DIT!</h1>
+	<div class="row">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Add to compare
+			</label>
+		</div>
+		<button type="button" class="btn btn-default hide-button" aria-label="hide content" ng-click="dismissInfo('#ditInfo')">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div class="row">
+		<div class="col-md-6 hiddenBox table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th><h3>UCD at a glance</h3></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Global Ranking</strong>: 176</td>
+					</tr>
+					<tr>
+						<td><strong>Irish Ranking</strong>: 2</td>
+					</tr>
+					<tr>
+						<td><strong>Enrollment</strong>: 30,000+</td>
+					</tr>
+					<tr>
+						<td><strong>Founded</strong>: 1854</td>
+					</tr>
+					<tr>
+						<td><strong>Website</strong>: <a href="http://www.ucd.ie/">http://www.ucd.ie/</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 hiddenBox">
+			<h4>UCD video</h4>
+			<iframe width="100%" height="310px"  src="https://www.youtube.com/embed/4pgiisFW7LQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+<hr>
 </section>
+<!-- DIT INFO END -->
+<!-- TCD INFO START -->
 <section class="intiallyHidden" id="tcdInfo">
-	<h1>Hello TCD!</h1>
+	<div class="row">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Add to compare
+			</label>
+		</div>
+		<button type="button" class="btn btn-default hide-button" aria-label="hide content" ng-click="dismissInfo('#ditInfo')">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div class="row">
+		<div class="col-md-6 hiddenBox table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th><h3>UCD at a glance</h3></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Global Ranking</strong>: 176</td>
+					</tr>
+					<tr>
+						<td><strong>Irish Ranking</strong>: 2</td>
+					</tr>
+					<tr>
+						<td><strong>Enrollment</strong>: 30,000+</td>
+					</tr>
+					<tr>
+						<td><strong>Founded</strong>: 1854</td>
+					</tr>
+					<tr>
+						<td><strong>Website</strong>: <a href="http://www.ucd.ie/">http://www.ucd.ie/</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 hiddenBox">
+			<h4>UCD video</h4>
+			<iframe width="100%" height="310px"  src="https://www.youtube.com/embed/4pgiisFW7LQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+<hr>
 </section>
+<!-- TCD INFO END -->
+<!-- IADT INFO START -->
 <section class="intiallyHidden" id="iadtInfo">
-	<h1>Hello IADT!</h1>
+	<div class="row">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Add to compare
+			</label>
+		</div>
+		<button type="button" class="btn btn-default hide-button" aria-label="hide content" ng-click="dismissInfo('#ditInfo')">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div class="row">
+		<div class="col-md-6 hiddenBox table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th><h3>UCD at a glance</h3></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Global Ranking</strong>: 176</td>
+					</tr>
+					<tr>
+						<td><strong>Irish Ranking</strong>: 2</td>
+					</tr>
+					<tr>
+						<td><strong>Enrollment</strong>: 30,000+</td>
+					</tr>
+					<tr>
+						<td><strong>Founded</strong>: 1854</td>
+					</tr>
+					<tr>
+						<td><strong>Website</strong>: <a href="http://www.ucd.ie/">http://www.ucd.ie/</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 hiddenBox">
+			<h4>UCD video</h4>
+			<iframe width="100%" height="310px"  src="https://www.youtube.com/embed/4pgiisFW7LQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+<hr>
 </section>
+<!-- IADT INFO END -->
 </div>
 <footer>
 	<ul>

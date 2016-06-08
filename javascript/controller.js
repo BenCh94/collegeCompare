@@ -10,4 +10,7 @@ angular.module('collegeControllers',[]).controller('MyController',function($scop
     $scope.dismissInfo = function (infoId) {
         $(infoId).hide();
     };
+//Trying to make twitter api work in angular this code from ngtweet website
+    //var myApp = angular.module("collegeCompare", ['ngtweet']);
 });
+
