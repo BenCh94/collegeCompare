@@ -1,2 +1,2 @@
-angular.module("collegeCompare",['collegeControllers','ui.bootstrap']);
+angular.module("collegeCompare",['collegeControllers','ui.bootstrap','ngtweet']);
 
