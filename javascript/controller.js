@@ -1,4 +1,5 @@
-angular.module('collegeControllers',[]).controller('MyController',function($scope) {
+angular.module('collegeControllers',[])
+    .controller('MyController',function($scope) {
 //	controller	logic	here
     $scope.showInfo = function (infoId) {
         $(infoId).show();
@@ -11,12 +12,13 @@ angular.module('collegeControllers',[]).controller('MyController',function($scop
     };
 //Trying to make twitter api work in angular this code from ngtweet website
     //var myApp = angular.module("collegeCompare", ['ngtweet']);
-});
-/*angular.module('ui.bootstrap', []).controller('ModalCtrl',function($scope, $uibmodal){
-    $scope.open = function (size) {
-        $uibModal.open();
-    };
-});*/
+    })
+angular.module('ui.bootstrap', [])
+    .controller('modalCtrl', function($scope, $uibModal) {
+
+    })
+
+
 
 
 
