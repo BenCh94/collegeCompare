@@ -1,2 +1,2 @@
-angular.module("collegeCompare",['collegeControllers','ui.bootstrap.demo']);
+angular.module("collegeCompare",['collegeControllers']);
 angular.module('ui.bootstrap.demo', ['ngAnimate', 'ui.bootstrap']);
