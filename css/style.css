@@ -109,3 +109,10 @@ form{
 	margin-bottom: 535px;
 
 }
+footer>div>ul>div>li>a:hover{
+	background-color: #0D4E49;
+	text-decoration: none;
+}
+footer>div>ul>div>li>a{
+	font-size: 20px;
+}
